@@ -1,0 +1,277 @@
+@import url("./config.css");
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    width: 100%;
+    padding: 1.5rem 1rem;
+    background-color: var(--clr-primary-800);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+nav > .nav-brand > a{
+    color: var(--clr-accent-500);
+    font-size: var(--fs-l);
+    font-weight: 600;
+}
+
+nav > .nav-brand > a:hover{
+    color: var(--clr-accent-200);
+}
+
+nav > .nav-links {
+    flex-basis: 50%;
+}
+
+nav > .nav-links > ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav > .nav-links > ul > * {
+    list-style-type: none;
+}
+
+nav > .nav-links > ul > .nav-btn {
+    border: 1px solid var(--clr-secondary-800);
+    padding: 0.5rem 0;
+    min-width: 15%;
+    text-align: center;
+    cursor: pointer;
+}
+
+nav > .nav-links > ul > .nav-btn:hover {
+    background-color: var(--clr-secondary-800);  
+    transition: 0.40s ease-in-out;
+}
+
+nav > .nav-links > ul > .nav-btn:hover a {
+    color: var(--clr-primary-800);
+}
+
+.home-container {
+    min-height: 100vh;
+    background-image: url("../img/home-banner.png");
+    background-size: cover;
+    background-position: center center;
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.home-container h1 {
+    color: var(--clr-accent-500);
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 0rem;
+    background-color: var(--clr-primary-800);
+    z-index: 99;
+}
+
+footer > .footer-copyright > h3 {
+    font-size: var(--fs-s);
+    color: var(--clr-primary-400);
+    font-weight: 400;
+}
+
+.container > .posts-container {
+    padding-block: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--clr-secondary-800);
+    min-height: 100vh;
+    justify-content: space-evenly;
+}
+
+.container > .posts-container > .post {
+    flex-basis: 40%;
+    background-color: var(--clr-primary-800);
+    padding: 0.5rem;
+    color: var(--clr-primary-200);
+    position: relative;
+    margin: 1rem;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+}
+
+.container > .posts-container > .post > .post-title {
+    font-size: var(--fs-l);
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    border-bottom: 4px solid var(--clr-accent-500);
+    color: var(--clr-accent-200);
+}
+
+.container > .posts-container > .post > .post-img {
+    max-width:100%;
+    height:auto;
+}
+
+.container > .posts-container > .post > .post-author {
+    color: var(--clr-primary-400);
+    font-weight: 300;
+    font-size: var(--fs-s);
+}
+
+.container > .posts-container > .post > .post-desc {
+    font-weight: 400;
+    font-size: var(--fs-m);
+    margin-bottom: 1rem;
+}
+
+.container > .posts-container > .post > .post-link {
+    position: absolute;
+    font-size: var(--fs-m);
+    right: 5%;
+    bottom: 5%;
+}
+
+.construction-container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--clr-primary-800);
+    color: var(--clr-primary-200);
+}
+
+.construction-container > .constructor {
+    background-image: url("../img/constructor.png");
+    background-size: cover;
+    height: 20rem;
+    width: 20rem;
+}
+
+.container > .form-container {
+    background-color: var(--clr-secondary-800);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 2rem;
+}
+
+.container >  .form-container > form {
+    background-color: var(--clr-primary-800);
+    padding: 3rem 2rem;
+    color: var(--clr-primary-200);
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.container >  .form-container > form  h1 {
+    font-size: var(--fs-l);
+}
+
+.container >  .form-container > form  > p {
+    font-size: var(--fs-s);
+}
+
+.container >  .form-container > form > p > a {
+    color: var(--clr-accent-500);
+}
+
+.container >  .form-container > form > p > a:hover {
+    color: var(--clr-accent-200);
+}
+
+.container > .form-container > form > .form-item {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0.5rem;
+}
+
+.container > .form-container > form > .form-item p {
+    font-size: var(--fs-s);
+    color: var(--clr-accent-500);
+    padding-top: 0.4rem;
+    font-weight: 600;
+}
+
+.container > .form-container > form > .form-item > .form-label {
+    font-weight: 500;
+    font-size: var(--fs-m);
+    margin-bottom: 0.5rem;
+}
+
+.container > .form-container > form > .form-item > .form-input {
+    border: none;
+    background-color: var(--clr-primary-200);
+    outline: none;
+    padding: 0.3rem 0.4rem;
+    font-size: var(--fs-m);
+    font-weight: 500;
+    color: var(--clr-primary-800);
+}
+
+.container > .form-container > form > .form-item > .form-input::placeholder {
+    font-weight: 500;
+}
+
+.container > .form-container > form > .form-item > .form-submit {
+    border: none;
+    font-size: var(--fs-m);
+    font-weight: 500;
+    background-color: var(--clr-secondary-800);
+    padding: 0.5rem 0rem;
+    color: var(--clr-primary-800);
+    cursor: pointer;
+}
+
+.container > .form-container > form > .form-item > .form-input:focus ,.container > .form-container > form > .form-item > .form-input:hover {
+    background-color: var(--clr-primary-400);
+}
+
+.container > .form-container > form > .form-item > .form-submit:hover {
+    background-color: var(--clr-secondary-600);
+    transition: 0.40s ease-in-out;
+}
+
+@media only screen and (max-width: 640px) {
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+    }
+
+    .nav > .nav-menu {
+        position: absolute;
+        right: 5%;
+        margin-top: 0.5rem;
+        cursor: pointer;
+    }
+
+    .nav > .nav-links {
+        display: none;
+        margin-top: 1rem;
+        width: 100%;
+    }
+
+    .nav > .nav-links > ul {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .nav > .nav-links > ul > .nav-link {
+        margin-block: 0.5rem;
+    }
+
+    .container > .posts-container {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+}
