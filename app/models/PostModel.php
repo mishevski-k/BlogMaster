@@ -25,6 +25,32 @@ class PostModel {
         }
     }
 
+    public function updatePost($data) {
+        $this->db->query("UPDATE posts SET title=:title, description=:description, full_text=:full_text, updated_at=:updated_at WHERE id = {$data['id']} ");
+
+        $this->db->bind(":title", $data['title']);
+        $this->db->bind(":description", $data['description']);
+        $this->db->bind(":full_text", $data['content']);
+        $this->db->bind(":updated_at", $data['date']);
+
+        if($this->db->execute()) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
+    public function deletePost($id) {
+        $this->db->query("DELETE FROM posts WHERE id = '$id' ");
+
+        if($this->db->execute()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public function getPosts() {
         $this->db->query("SELECT * FROM posts");
         $result = $this->db->resultSet();

@@ -15,7 +15,7 @@
 
 
     --fs-xs: 0.4rem;
-    --fs-s: 0.7rem;
+    --fs-s: 0.8rem;
     --fs-m: 1.1rem;
     --fs-l: 1.6rem;
     --fs-xl: 2.8em;
@@ -75,22 +75,40 @@ a:hover {
     min-width: 60%;
 }
 
+.success {
+    background-color: rgb(28, 163, 28);
+}
+
+.success:hover {
+    background-color: rgb(38, 138, 38);
+    transition: 0.40s ease-in-out;
+}
+
+.danger {
+    background-color: rgb(202, 22, 22);
+}
+
+.danger:hover {
+    background-color: rgb(167, 26, 26);
+    transition: 0.40s ease-in-out;
+}
+
 @media only screen and (max-width: 1024px) {
     :root {
         --fs-xs: 0.3rem;
-        --fs-s: 0.6rem;
+        --fs-s: 0.7rem;
         --fs-m: 0.9rem;
         --fs-l: 1.2rem;
-        --fs-xl: 2.4em;
+        --fs-xl: 2em;
     }
 }
 
 @media only screen and (max-width: 640px) {
     :root {
         --fs-xs: 0.1rem;
-        --fs-s: 0.4rem;
+        --fs-s: 0.5rem;
         --fs-m: 0.7rem;
         --fs-l: 0.9rem;
-        --fs-xl: 2em;
+        --fs-xl: 1.6em;
     }
 }

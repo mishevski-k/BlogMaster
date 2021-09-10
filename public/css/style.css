@@ -15,6 +15,10 @@ nav {
     z-index: 99;
 }
 
+nav > .nav-menu {
+    display: none;
+}
+
 nav > .nav-brand > a{
     color: var(--clr-accent-500);
     font-size: var(--fs-l);
@@ -241,6 +245,83 @@ footer > .footer-copyright > h3 {
     transition: 0.40s ease-in-out;
 }
 
+.post-container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--clr-secondary-800);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post-container > .post {
+    background-color: var(--clr-primary-800);
+    min-width: 70%;
+    min-height: 50vh;
+    color: var(--clr-primary-200);
+    text-align: center;
+    position: relative;
+    padding: 1rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post-container > .post > .post-details {
+    display: flex;
+    margin-top: 1rem;
+    align-items: center;
+}
+
+.post-container > .post > .post-details > * {
+    margin: 0.5rem;
+}
+
+.post-container > .post > .post-details > .update-post {
+    padding: 0.5rem 1rem;
+    font-size: var(--fs-s);
+}
+
+.post-container > .post > .post-details .post-delete {
+    color: var(--clr-primary-200);
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    font-size: var(--fs-s);
+    border: none;
+    outline: none;
+}
+
+.post-container > .post > .post-details .post-delete:hover {
+    color: var(--clr-primary-400);
+    transition: 0.40s ease-in-out;
+}
+
+.post-container > .post > .post-title {
+    font-size: var(--fs-xl);
+}
+
+.post-container > .post > .post-details > .post-author {
+    font-size: var(--fs-s);
+    text-transform: uppercase;
+    font-weight: 400;
+    color: var(--clr-primary-400);
+}
+
+.post-container > .post > .post-content {
+    border: 2px solid var(--clr-accent-500);
+    padding: 1rem 0.3rem;
+    font-size: var(--fs-m);
+    width: 60%;
+}
+
+.post-container > .post > .post-updated {
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    font-size: var(--fs-s);
+    color: var(--clr-primary-400);
+}
+
 @media only screen and (max-width: 640px) {
     .nav {
         flex-direction: column;
@@ -249,6 +330,7 @@ footer > .footer-copyright > h3 {
     }
 
     .nav > .nav-menu {
+        display: block;
         position: absolute;
         right: 5%;
         margin-top: 0.5rem;
@@ -273,5 +355,9 @@ footer > .footer-copyright > h3 {
     .container > .posts-container {
         flex-direction: column;
         flex-wrap: nowrap;
+    }
+
+    .post-container > .post > .post-details {
+        flex-direction: column;
     }
 }
